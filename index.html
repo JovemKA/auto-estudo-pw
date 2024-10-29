@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulário com LocalStorage</title>
+    <title>Formulário para Cadastro</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -12,31 +12,59 @@
       <form id="cadastroForm">
         <div class="form-group">
           <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required />
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+          />
         </div>
 
         <div class="form-group">
           <label for="endereco">Endereço:</label>
-          <input type="text" id="endereco" name="endereco" required />
+          <input
+            type="text"
+            id="endereco"
+            name="endereco"
+            placeholder="Digite seu endereço"
+            required
+          />
         </div>
 
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu email"
+            required
+          />
         </div>
 
         <div class="form-group">
           <label for="telefone">Telefone:</label>
-          <input type="tel" id="telefone" name="telefone" required />
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="Número com código do país (somente números)"
+            required
+          />
         </div>
 
         <div class="button-group">
           <button type="button" onclick="gravarDados()">Gravar</button>
           <button type="button" onclick="exibirDados()">Exibir</button>
+          <button type="button" onclick="enviarWhatsApp()">
+            Enviar via WhatsApp
+          </button>
         </div>
       </form>
 
-      <div id="exibirDados" class="exibir-dados"></div>
+      <!-- Área para exibir os dados armazenados -->
+      <div id="exibirArea" class="exibir-area"></div>
     </div>
 
     <script src="script.js"></script>
